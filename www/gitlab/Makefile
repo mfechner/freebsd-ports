@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gitlab
-PORTVERSION=	8.16.9
+PORTVERSION=	8.17.5
 DISTVERSIONPREFIX=	v
 PORTREVISION=	2
 CATEGORIES=	www devel
@@ -162,7 +162,10 @@ RUN_DEPENDS=	git>=2.8.4:devel/git \
 	rubygem-health_check22>=2.2.0:devel/rubygem-health_check22 \
 	rubygem-vmstat>=2.3.0:sysutils/rubygem-vmstat \
 	rubygem-sys-filesystem>=1.1.6:sysutils/rubygem-sys-filesystem \
-	rubygem-rinku>=1.7.3:www/rubygem-rinku
+	rubygem-rinku>=1.7.3:www/rubygem-rinku \
+	rubygem-validates_hostname>=1.0.6:dns/rubygem-validates_hostname \
+	rubygem-webpack-rails>=0.9.9:www/rubygem-webpack-rails \
+	rubygem-rack-proxy>=0.6.0:www/rubygem-rack-proxy
 
 PGSQL_RUN_DEPENDS=	rubygem-pg>=0.18.2:databases/rubygem-pg
 MYSQL_RUN_DEPENDS=	rubygem-mysql2>=0.4.5:databases/rubygem-mysql2
