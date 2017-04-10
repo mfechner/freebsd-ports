@@ -166,7 +166,8 @@ RUN_DEPENDS=	git>=2.8.4:devel/git \
 	rubygem-validates_hostname>=1.0.6:dns/rubygem-validates_hostname \
 	rubygem-webpack-rails>=0.9.9:www/rubygem-webpack-rails \
 	rubygem-rack-proxy>=0.6.0:www/rubygem-rack-proxy \
-	npm>=0:www/npm
+	npm>=0:www/npm \
+	sudo>=0:security/sudo
 
 PGSQL_RUN_DEPENDS=	rubygem-pg>=0.18.2:databases/rubygem-pg
 MYSQL_RUN_DEPENDS=	rubygem-mysql2>=0.4.5:databases/rubygem-mysql2
