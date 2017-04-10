@@ -1,5 +1,5 @@
---- Gemfile.orig	2017-04-10 12:26:47.576773000 +0200
-+++ Gemfile	2017-04-10 12:37:33.836865000 +0200
+--- Gemfile.orig	2017-04-06 02:57:36.000000000 +0200
++++ Gemfile	2017-04-10 13:15:35.077480000 +0200
 @@ -1,19 +1,15 @@
  source 'https://rubygems.org'
  
@@ -176,7 +176,7 @@
  
  # Ace editor
  gem 'ace-rails-ap', '~> 4.1.0'
-@@ -222,28 +217,28 @@
+@@ -222,119 +217,38 @@
  gem 'chronic_duration', '~> 0.10.6'
  
  gem 'webpack-rails', '~> 0.9.9'
@@ -213,8 +213,87 @@
  
  gem 'premailer-rails', '~> 1.9.0'
  
-@@ -330,11 +325,11 @@
- 
+-# Metrics
+-group :metrics do
+-  gem 'allocations', '~> 1.0', require: false, platform: :mri
+-  gem 'method_source', '~> 0.8', require: false
+-  gem 'influxdb', '~> 0.2', require: false
+-end
+-
+-group :development do
+-  gem 'foreman', '~> 0.78.0'
+-  gem 'brakeman', '~> 3.4.0', require: false
+-
+-  gem 'letter_opener_web', '~> 1.3.0'
+-  gem 'bullet', '~> 5.2.0', require: false
+-  gem 'rblineprof', '~> 0.3.6', platform: :mri, require: false
+-  gem 'web-console', '~> 2.0'
+-
+-  # Better errors handler
+-  gem 'better_errors', '~> 1.0.1'
+-  gem 'binding_of_caller', '~> 0.7.2'
+-
+-  # thin instead webrick
+-  gem 'thin', '~> 1.7.0'
+-end
+-
+-group :development, :test do
+-  gem 'pry-byebug', '~> 3.4.1', platform: :mri
+-  gem 'pry-rails', '~> 0.3.4'
+-
+-  gem 'awesome_print', '~> 1.2.0', require: false
+-  gem 'fuubar', '~> 2.0.0'
+-
+-  gem 'database_cleaner',   '~> 1.5.0'
+-  gem 'factory_girl_rails', '~> 4.7.0'
+-  gem 'rspec-rails',        '~> 3.5.0'
+-  gem 'rspec-retry',        '~> 0.4.5'
+-  gem 'spinach-rails',      '~> 0.2.1'
+-  gem 'spinach-rerun-reporter', '~> 0.0.2'
+-  gem 'rspec_profiling'
+-
+-  # Prevent occasions where minitest is not bundled in packaged versions of ruby (see #3826)
+-  gem 'minitest', '~> 5.7.0'
+-
+-  # Generate Fake data
+-  gem 'ffaker', '~> 2.4'
+-
+-  gem 'capybara',            '~> 2.6.2'
+-  gem 'capybara-screenshot', '~> 1.0.0'
+-  gem 'poltergeist',         '~> 1.9.0'
+-
+-  gem 'spring',                   '~> 1.7.0'
+-  gem 'spring-commands-rspec',    '~> 1.0.4'
+-  gem 'spring-commands-spinach',  '~> 1.1.0'
+-
+-  gem 'rubocop', '~> 0.46.0', require: false
+-  gem 'rubocop-rspec', '~> 1.9.1', require: false
+-  gem 'scss_lint', '~> 0.47.0', require: false
+-  gem 'haml_lint', '~> 0.18.2', require: false
+-  gem 'simplecov', '0.12.0', require: false
+-  gem 'flay', '~> 2.6.1', require: false
+-  gem 'bundler-audit', '~> 0.5.0', require: false
+-
+-  gem 'benchmark-ips', '~> 2.3.0', require: false
+-
+-  gem 'license_finder', '~> 2.1.0', require: false
+-  gem 'knapsack', '~> 1.11.0'
+-
+-  gem 'activerecord_sane_schema_dumper', '0.2'
+-
+-  gem 'stackprof', '~> 0.2.10'
+-end
+-
+-group :test do
+-  gem 'shoulda-matchers', '~> 2.8.0', require: false
+-  gem 'email_spec', '~> 1.6.0'
+-  gem 'json-schema', '~> 2.6.2'
+-  gem 'webmock', '~> 1.21.0'
+-  gem 'test_after_commit', '~> 1.1'
+-  gem 'sham_rack', '~> 1.3.6'
+-  gem 'timecop', '~> 0.8.0'
+-end
+-
  gem 'newrelic_rpm', '~> 3.16'
  
 -gem 'octokit', '~> 4.6.2'
@@ -227,7 +306,7 @@
  gem 'html2text'
  
  gem 'ruby-prof', '~> 0.16.2'
-@@ -346,8 +341,11 @@
+@@ -346,8 +260,11 @@
  gem 'paranoia', '~> 2.2'
  
  # Health check
